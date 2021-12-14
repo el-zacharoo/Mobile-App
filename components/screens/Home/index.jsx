@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { material } from 'react-native-typography';
-import { theme } from '../../../theme/index';
+import { theme } from '../../theme/index';
 
 export const Home = ({ navigation }) => {
     const [item, setItem] = useState(false);
