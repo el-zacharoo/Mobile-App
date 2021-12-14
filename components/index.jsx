@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { material } from 'react-native-typography';
 import { theme } from '../theme/index';
 
 export const Components = () => {
+    const [item, setItem] = useState(false);
+
     return (
         <View style={styles.container}>
             <Text style={material.display1}>
@@ -12,12 +14,23 @@ export const Components = () => {
             </Text>
             <View style={styles.row}>
                 <Button color={theme.colors.primary} style={{ marginRight: 4 }} mode="contained" >
-                    Create
+                    Create new
                 </Button>
-                <Button color={theme.colors.primary} mode="outlined" >
-                    Edit
-                </Button>
+                {item === false ?
+                    <Button onPress={() => setItem(true)} color={theme.colors.primary} mode="outlined" >
+                        Edit
+                    </Button>
+                    :
+                    <Button onPress={() => setItem(false)} color={theme.colors.primary} mode="outlined" >
+                        Cancel
+                    </Button>
+                }
             </View>
+            {item === true &&
+                <Text style={material.button, { paddingTop: 10 }}>
+                    Welcome to my app
+                </Text>
+            }
         </View>
 
     )
