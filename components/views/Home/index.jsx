@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import { Button } from 'react-native-paper';
 import { material } from 'react-native-typography';
-import { theme } from '../theme/index';
+import { theme } from '../../../theme/index';
 
-export const Components = () => {
+export const Home = ({ navigation }) => {
     const [item, setItem] = useState(false);
 
     return (
@@ -13,7 +13,7 @@ export const Components = () => {
                 Welcome to my app
             </Text>
             <View style={styles.row}>
-                <Button color={theme.colors.primary} style={{ marginRight: 4 }} mode="contained" >
+                <Button onPress={() => navigation.navigate('Details')} color={theme.colors.primary} style={{ marginRight: 4, elevation: 0 }} mode="contained" >
                     Create new
                 </Button>
                 {item === false ?
@@ -32,10 +32,9 @@ export const Components = () => {
                 </Text>
             }
         </View>
-
     )
 }
-export default Components;
+export default Home;
 
 const styles = StyleSheet.create({
     container: {
