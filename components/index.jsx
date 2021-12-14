@@ -10,12 +10,14 @@ export const Components = () => {
             <Text style={material.display1}>
                 Welcome to my app
             </Text>
-            <Button color={theme.colors.primary} mode="contained" >
-                Create
-            </Button>
-            <Button color={theme.colors.primary} mode="outlined" >
-                Open
-            </Button>
+            <View style={styles.row}>
+                <Button color={theme.colors.primary} style={{ marginRight: 4 }} mode="contained" >
+                    Create
+                </Button>
+                <Button color={theme.colors.primary} mode="outlined" >
+                    Edit
+                </Button>
+            </View>
         </View>
 
     )
@@ -28,5 +30,12 @@ const styles = StyleSheet.create({
         backgroundColor: theme.colors.backgroundColor,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    row: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignSelf: 'stretch',
+
     },
 });
