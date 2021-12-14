@@ -1,11 +1,18 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, SafeAreaView } from 'react-native';
+import { Button, } from 'react-native-paper';
 
 export const Components = () => {
     return (
-        <Text>
-            test
-        </Text>
+        <SafeAreaView>
+            <Button mode="contained" >
+                Create
+            </Button>
+            <Text>
+                testfef4r43r
+            </Text>
+        </SafeAreaView>
+
     )
 }
 export default Components; 
