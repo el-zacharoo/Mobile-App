@@ -1,12 +1,20 @@
 import React from 'react';
 
-import { View } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
+
 
 export const Details = () => {
     return (
-        <View>
-
+        <View style={styles.container}>
+            <Text>Test</Text>
         </View>
     )
 }
-export default Details; 
+export default Details;
+
+const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        marginVertical: 24,
+    },
+});
