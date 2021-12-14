@@ -1,18 +1,30 @@
 import React from 'react';
-import { Text, SafeAreaView } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 import { Button, } from 'react-native-paper';
 
 export const Components = () => {
     return (
-        <SafeAreaView>
-            <Button mode="contained" >
+        <View style={styles.container}>
+            <Button
+                mode="contained"
+
+            >
                 Create
             </Button>
             <Text>
                 testfef4r43r
             </Text>
-        </SafeAreaView>
+        </View>
 
     )
 }
-export default Components; 
+export default Components;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
