@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View, Image } from 'react-native';
 import { Button } from '../../components/Button';
 import { material } from 'react-native-typography';
 import { theme } from '../../theme/index';
@@ -29,9 +29,7 @@ export const Home = ({ navigation }) => {
                 }
             </View>
             {item === true &&
-                <Text style={material.button, { paddingTop: 10 }}>
-                    Welcome to my app
-                </Text>
+                <Image style={{ height: 300, width: 300, marginTop: 3 }} source={require('/Users/zachary/Native/mobile-app/App/assets/mountains.jpeg')} />
             }
         </View>
     )

@@ -22,4 +22,3 @@ export const Tabs = (props) => {
         </TouchableOpacity>
     )
 }
-
