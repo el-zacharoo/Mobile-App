@@ -14,16 +14,16 @@ export const Home = ({ navigation }) => {
             </Text>
             <View style={styles.row}>
 
-                <Button color={theme.colors.primary} style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Details')} variant="contained" >
+                <Button style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Details')} variant="contained" >
                     Create new
                 </Button>
 
                 {item === false ?
-                    <Button color={theme.colors.primary} variant="outlined" onPress={() => setItem(true)}  >
+                    <Button variant="outlined" onPress={() => setItem(true)}  >
                         Edit
                     </Button>
                     :
-                    <Button color={theme.colors.primary} variant="outlined" onPress={() => setItem(false)}  >
+                    <Button variant="outlined" onPress={() => setItem(false)}  >
                         Cancel
                     </Button>
                 }
