@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Button } from '../../components/Button';
 import { material } from 'react-native-typography';
 import { theme } from '../../theme/index';
 
@@ -13,15 +13,17 @@ export const Home = ({ navigation }) => {
                 Welcome to my app
             </Text>
             <View style={styles.row}>
-                <Button onPress={() => navigation.navigate('Details')} color={theme.colors.primary} style={{ marginRight: 4, elevation: 0 }} mode="contained" >
+
+                <Button color={theme.colors.primary} sx={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Details')} variant="contained" >
                     Create new
                 </Button>
+
                 {item === false ?
-                    <Button onPress={() => setItem(true)} color={theme.colors.primary} mode="outlined" >
+                    <Button color={theme.colors.primary} variant="outlined" onPress={() => setItem(true)}  >
                         Edit
                     </Button>
                     :
-                    <Button onPress={() => setItem(false)} color={theme.colors.primary} mode="outlined" >
+                    <Button color={theme.colors.primary} variant="outlined" onPress={() => setItem(false)}  >
                         Cancel
                     </Button>
                 }
