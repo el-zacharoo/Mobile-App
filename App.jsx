@@ -1,19 +1,22 @@
 import React from 'react';
-import { Home } from './components/screens/Home';
-import { Details } from './components/screens/Details';
+import { Home } from './App/screens/Home';
+import { Details } from './App/screens/Details';
 
+import Navigation from './App/navigators/index'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const App = () => {
-  const Stack = createStackNavigator();
+  const Stack = createStackNavigator()
+  const Tab = createBottomTabNavigator();
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Home" tabBar={(props) => <Navigation {...props} />}>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Details" component={Details} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
