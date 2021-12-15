@@ -5,20 +5,20 @@ import { TouchableOpacity } from 'react-native';
 
 
 export const Button = (props) => {
-    const { children, variant, onPress, color, sx } = props
+    const { children, variant } = props
 
     switch (variant) {
         case 'contained':
             return (
                 <TouchableOpacity>
-                    <Object onPress={onPress} color={color} style={sx} mode="contained" >
+                    <Object {...props} mode="contained" >
                         {children}
                     </Object>
                 </TouchableOpacity>)
         case 'outlined':
             return (
                 <TouchableOpacity>
-                    <Object onPress={onPress} color={color} style={sx} mode="outlined" >
+                    <Object {...props} mode="outlined" >
                         {children}
                     </Object>
                 </TouchableOpacity>
@@ -26,7 +26,7 @@ export const Button = (props) => {
         case 'text':
             return (
                 <TouchableOpacity>
-                    <Object onPress={onPress} color={color} style={sx} mode="text" >
+                    <Object {...props} mode="text" >
                         {children}
                     </Object>
                 </TouchableOpacity>
