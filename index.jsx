@@ -1,18 +1,9 @@
-import React from 'react';
-import { AppRegistry, LogBox } from 'react-native';
-import { Provider as PaperProvider } from 'react-native-paper';
+import 'react-native-gesture-handler';
+import { registerRootComponent } from 'expo';
 
 import App from './App';
-import { name as appName } from './app.json';
-import { theme } from './App/theme';
 
-const Main = () => {
-    return (
-        <PaperProvider theme={theme}>
-            <App />
-        </PaperProvider>
-    );
-};
-
-LogBox.ignoreLogs(['Require cycle:']);
-AppRegistry.registerComponent(appName, () => Main);
+// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
+// It also ensures that whether you load the app in Expo Go or in a native build,
+// the environment is set up appropriately
+registerRootComponent(App);
