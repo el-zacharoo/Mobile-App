@@ -6,7 +6,7 @@ import { theme } from '../theme/index';
 
 const Navigation = ({ state, descriptors, navigation }) => {
     return (
-        <View style={{ flexDirection: 'row', padding: 4 }}>
+        <View style={{ flexDirection: 'row', paddingLeft: 4, paddingRight: 4, paddingBottom: 4 }}>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
                 const label =
@@ -29,14 +29,12 @@ const Navigation = ({ state, descriptors, navigation }) => {
                         navigation.navigate({ name: route.name, merge: true });
                     }
                 };
-
                 const onLongPress = () => {
                     navigation.emit({
                         type: 'tabLongPress',
                         target: route.key,
                     });
                 };
-
                 return (
                     <Tabs color={isFocused ? theme.colors.accent : ''} onPress={onPress} onLongPress={onLongPress}>
                         {label}
@@ -47,4 +45,3 @@ const Navigation = ({ state, descriptors, navigation }) => {
     );
 }
 export default Navigation
-

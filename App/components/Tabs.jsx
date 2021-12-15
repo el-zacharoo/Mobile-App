@@ -11,7 +11,8 @@ export const Tabs = (props) => {
         <TouchableOpacity>
             <Button {...props} style={{
                 borderTopColor: color ? color : theme.colors.background,
-                borderTopWidth: 1,
+                borderTopWidth: 3,
+                paddingTop: 4,
                 borderRadius: 0,
                 marginLeft: 1,
                 marginRight: 1
