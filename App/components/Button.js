@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Button as Object } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native';
+
 import { theme } from '../theme/index';
 
-
 export const Button = (props) => {
-    const { children, variant, color } = props
+    const { children, variant, color } = props;
 
     switch (variant) {
         case 'contained':
