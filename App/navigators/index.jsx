@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
+
+import { Button } from '../components/Button'
 
 
 const Navigation = ({ state, descriptors, navigation }) => {
@@ -36,19 +38,9 @@ const Navigation = ({ state, descriptors, navigation }) => {
                 };
 
                 return (
-                    <TouchableOpacity
-                        accessibilityRole="button"
-                        accessibilityState={isFocused ? { selected: true } : {}}
-                        accessibilityLabel={options.tabBarAccessibilityLabel}
-                        testID={options.tabBarTestID}
-                        onPress={onPress}
-                        onLongPress={onLongPress}
-                        style={{ flex: 1 }}
-                    >
-                        <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
-                            {label}
-                        </Text>
-                    </TouchableOpacity>
+                    <Button onPress={onPress} onLongPress={onLongPress}>
+                        {label}
+                    </Button>
                 );
             })}
         </View>
