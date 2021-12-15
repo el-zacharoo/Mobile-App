@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { Button } from '../components/Button'
-
+import { Tabs } from '../components/Tabs';
+import { theme } from '../theme/index';
 
 const Navigation = ({ state, descriptors, navigation }) => {
     return (
@@ -38,12 +38,13 @@ const Navigation = ({ state, descriptors, navigation }) => {
                 };
 
                 return (
-                    <Button onPress={onPress} onLongPress={onLongPress}>
+                    <Tabs color={isFocused ? theme.colors.accent : ''} onPress={onPress} onLongPress={onLongPress}>
                         {label}
-                    </Button>
+                    </Tabs>
                 );
             })}
         </View>
     );
 }
 export default Navigation
+
