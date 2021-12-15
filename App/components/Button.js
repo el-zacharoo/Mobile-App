@@ -33,6 +33,12 @@ export const Button = (props) => {
                 </TouchableOpacity>
             )
         default:
-            throw new Error('Invalid Button variant');
+            return (
+                <TouchableOpacity>
+                    <Object {...props} color={color ? color : theme.colors.primary} mode="text" >
+                        {children}
+                    </Object>
+                </TouchableOpacity>
+            )
     }
 }

@@ -19,7 +19,7 @@ export const Home = ({ navigation }) => {
                 </Button>
 
                 {item === false ?
-                    <Button variant="outlined" onPress={() => setItem(true)}  >
+                    <Button onPress={() => setItem(true)}  >
                         Edit
                     </Button>
                     :
