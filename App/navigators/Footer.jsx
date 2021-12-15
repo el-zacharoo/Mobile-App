@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { Tabs } from '../components/Tabs';
 import { theme } from '../theme/index';
 
-const Navigation = ({ state, descriptors, navigation }) => {
+const Footer = ({ state, descriptors, navigation }) => {
     return (
         <View style={{ flexDirection: 'row', paddingLeft: 4, paddingRight: 4, paddingBottom: 4 }}>
             {state.routes.map((route, index) => {
@@ -44,4 +44,4 @@ const Navigation = ({ state, descriptors, navigation }) => {
         </View>
     );
 }
-export default Navigation
+export default Footer
