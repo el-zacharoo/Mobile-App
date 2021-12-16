@@ -34,5 +34,8 @@ export const theme = {
             color: palette.white,
             fontSize: 32,
         }
+    },
+    animation: {
+
     }
 };
