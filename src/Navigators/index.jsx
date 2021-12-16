@@ -29,7 +29,11 @@ const Routes = () => {
     const Tab = createBottomTabNavigator();
 
     return (
-        <Tab.Navigator initialRouteName="Home" screenOptions={{ header: (props) => <Header {...props} /> }}   >
+        <Tab.Navigator initialRouteName="Home" screenOptions={{
+            activeTintColor: theme.colors.accent,
+            inactiveTintColor: theme.colors.primary,
+            header: (props) => <Header {...props} />
+        }}   >
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Profile" component={Profile} />
             <Tab.Screen name="Details" component={Details} />

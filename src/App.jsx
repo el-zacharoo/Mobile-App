@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navigators } from './App/Navigators';
+import { Navigators } from './Navigators';
 
 const App = () => {
 

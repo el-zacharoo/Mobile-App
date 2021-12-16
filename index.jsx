@@ -3,8 +3,8 @@ import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
 
 import { Provider as PaperProvider } from 'react-native-paper';
-import { theme } from './App/theme'
-import App from './App';
+import { theme } from './src/theme'
+import App from './src/App';
 
 const Main = () => {
     return (

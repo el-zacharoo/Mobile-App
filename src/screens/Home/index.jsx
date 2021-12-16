@@ -13,7 +13,7 @@ export const Home = ({ navigation }) => {
                 flex: 1,
                 width: '100%',
                 justifyContent: "center"
-            }} source={require('/Users/zachary/Native/mobile-app/App/assets/mountains.jpeg')} >
+            }} source={require('/Users/zachary/Native/mobile-app/src/assets/mountains.jpeg')} >
                 <Text style={material.display1}>
                     Welcome to my app
                 </Text>
