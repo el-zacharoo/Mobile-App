@@ -5,10 +5,7 @@ import { Navigators } from './Navigators';
 const App = () => {
 
   return (
-
     <Navigators />
-
-
   );
 }
 
