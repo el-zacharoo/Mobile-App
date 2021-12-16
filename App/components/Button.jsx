@@ -11,15 +11,15 @@ export const Button = (props) => {
     switch (variant) {
         case 'contained':
             return (
-                <TouchableOpacity>
-                    <Object {...props} color={color ? color : theme.colors.primary} mode="contained" >
+                <TouchableOpacity >
+                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="contained" >
                         {children}
                     </Object>
                 </TouchableOpacity>)
         case 'outlined':
             return (
                 <TouchableOpacity>
-                    <Object {...props} color={color ? color : theme.colors.primary} mode="outlined" >
+                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="outlined" >
                         {children}
                     </Object>
                 </TouchableOpacity>
@@ -27,7 +27,7 @@ export const Button = (props) => {
         case 'text':
             return (
                 <TouchableOpacity>
-                    <Object {...props} color={color ? color : theme.colors.primary} mode="text" >
+                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
                         {children}
                     </Object>
                 </TouchableOpacity>
@@ -35,7 +35,7 @@ export const Button = (props) => {
         default:
             return (
                 <TouchableOpacity>
-                    <Object {...props} color={color ? color : theme.colors.primary} mode="text" >
+                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
                         {children}
                     </Object>
                 </TouchableOpacity>

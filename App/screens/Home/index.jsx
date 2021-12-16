@@ -23,11 +23,11 @@ export const Home = ({ navigation }) => {
                     </Button>
 
                     {item === false ?
-                        <Button variant="outlined" onPress={() => setItem(true)}  >
+                        <Button color={theme.colors.background} variant="outlined" onPress={() => setItem(true)}  >
                             Edit
                         </Button>
                         :
-                        <Button variant="outlined" onPress={() => setItem(false)}  >
+                        <Button color={theme.colors.background} variant="outlined" onPress={() => setItem(false)}  >
                             Cancel
                         </Button>
                     }
