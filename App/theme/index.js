@@ -18,5 +18,4 @@ export const theme = {
         accent: '#399cdb',
         background: "#ffffff",
     },
-
 };
