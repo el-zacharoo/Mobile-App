@@ -29,13 +29,14 @@ const Routes = () => {
     const Tab = createBottomTabNavigator();
 
     return (
-        <Tab.Navigator initialRouteName="Home"
-
+        <Tab.Navigator
+            initialRouteName="Home"
             screenOptions={{
-                activeTintColor: theme.colors.accent,
-                inactiveTintColor: theme.colors.primary,
-                header: (props) => <Header {...props} />
-            }}   >
+                header: (props) => <Header {...props} />,
+                tabBarActiveTintColor: theme.colors.accent,
+                tabBarInactiveTintColor: theme.colors.disabled,
+            }}
+        >
             <Tab.Screen name="Home" component={Home} />
             <Tab.Screen name="Profile" component={Profile} />
             <Tab.Screen name="Details" component={Details} />

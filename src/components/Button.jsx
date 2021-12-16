@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Button as Object } from 'react-native-paper';
-import { TouchableOpacity } from 'react-native';
+import { TouchableRipple, Button as Object } from 'react-native-paper';
 
 import { theme } from '../theme/index';
 
@@ -11,34 +10,34 @@ export const Button = (props) => {
     switch (variant) {
         case 'contained':
             return (
-                <TouchableOpacity >
+                <TouchableRipple  >
                     <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="contained" >
                         {children}
                     </Object>
-                </TouchableOpacity>)
+                </TouchableRipple>)
         case 'outlined':
             return (
-                <TouchableOpacity>
+                <TouchableRipple>
                     <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="outlined" >
                         {children}
                     </Object>
-                </TouchableOpacity>
+                </TouchableRipple>
             )
         case 'text':
             return (
-                <TouchableOpacity>
+                <TouchableRipple>
                     <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
                         {children}
                     </Object>
-                </TouchableOpacity>
+                </TouchableRipple>
             )
         default:
             return (
-                <TouchableOpacity>
+                <TouchableRipple>
                     <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
                         {children}
                     </Object>
-                </TouchableOpacity>
+                </TouchableRipple>
             )
     }
 }

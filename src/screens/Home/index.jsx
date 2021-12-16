@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, View, ImageBackground } from 'react-native';
+import { StyleSheet, View, ImageBackground } from 'react-native';
+import { Text } from 'react-native-paper';
 import { Button } from '../../components/Button';
-import { material } from 'react-native-typography';
 import { theme } from '../../theme/index';
 
 export const Home = ({ navigation }) => {
@@ -14,7 +14,7 @@ export const Home = ({ navigation }) => {
                 width: '100%',
                 justifyContent: "center"
             }} source={require('/Users/zachary/Native/mobile-app/src/assets/mountains.jpeg')} >
-                <Text style={material.display1}>
+                <Text style={theme.typography.h1}>
                     Welcome to my app
                 </Text>
                 <View style={styles.row}>
@@ -33,12 +33,11 @@ export const Home = ({ navigation }) => {
                     }
                 </View>
                 {item === true &&
-                    <Text style={material.display1}>
+                    <Text >
                         Cover
                     </Text>
                 }
             </ImageBackground>
-
         </View>
     )
 }

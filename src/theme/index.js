@@ -1,21 +1,38 @@
-import { DefaultTheme as NavigationDefaultTheme } from '@react-navigation/native';
 import { DefaultTheme as PaperDefaultTheme } from 'react-native-paper';
 
 const DefaultTheme = {
     ...PaperDefaultTheme,
-    ...NavigationDefaultTheme,
     colors: {
         ...PaperDefaultTheme.colors,
-        ...NavigationDefaultTheme.colors,
     },
 };
 
+const palette = {
+    darkBlue: '#2c384c',
+    lightBlue: '#399cdb',
+    white: "#ffffff",
+    grey: '#C6C6C6'
+}
+
 export const theme = {
+
     ...DefaultTheme,
     colors: {
-        ...DefaultTheme.colors,
-        primary: '#2c384c',
-        accent: '#399cdb',
-        background: "#ffffff",
+        primary: palette.darkBlue,
+        accent: palette.lightBlue,
+        background: palette.white,
+        disabled: palette.grey,
     },
+    typography: {
+        h1: {
+            letterSpacing: 1,
+            color: palette.darkBlue,
+            fontSize: 32,
+
+        },
+        h2: {
+            color: palette.white,
+            fontSize: 32,
+        }
+    }
 };
