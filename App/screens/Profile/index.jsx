@@ -1,18 +1,16 @@
 import React from 'react';
 
 import { View, StyleSheet, Text } from 'react-native';
-import { Button } from '../../components/Button'
 
 
-export const Details = ({ navigation }) => {
+export const Profile = () => {
     return (
         <View style={styles.container}>
-            <Text>Test</Text>
-            <Button onPress={() => navigation.navigate('Settings')}>Settings</Button>
+            <Text>Profile</Text>
         </View>
     )
 }
-export default Details;
+export default Profile;
 
 const styles = StyleSheet.create({
     container: {
