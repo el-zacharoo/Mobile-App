@@ -1,68 +1,40 @@
-// import React from 'react';
+import React from 'react';
 
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-// import { Details } from '../screens/Details';
-// import { Header } from '../components/Header';
-// import { Profile } from '../screens/Profile';
-// import { Home } from '../screens/Home';
-// import { Settings } from '../screens/Settings';
-
-// // const Routes = () => {
-// //     const Stack = createStackNavigator()
-// //     return (
-// //         <NavigationContainer>
-// //             <Stack.Navigator initialRouteName="Home" initialRouteName="Home"
-// //                 screenOptions={{ header: (props) => <Header {...props} /> }} >
-// //                 <Stack.Screen name="Details" component={Detail} />
-// //                 <Stack.Screen name="Settings" component={Settings} />
-// //             </Stack.Navigator>
-// //         </NavigationContainer>
-// //     );
-// // }
-
-// // const Detail = () => {
-// //     const Tab = createBottomTabNavigator();
-
-// //     return (
-
-// //         <Tab.Navigator initialRouteName="Home"
-// //             screenOptions={{ header: (props) => <Header {...props} /> }} >
-// //             <Tab.Screen name="Home" component={Home} />
-// //             <Tab.Screen name="Details" component={Details} />
-// //         </Tab.Navigator>
+import { Details } from '../screens/Details';
+import { Home } from '../screens/Home';
+import { Profile } from '../screens/Profile';
+import { Settings } from '../screens/Settings';
+import { Header } from '../components/Header';
 
 
-// //     );
-// // }
+export const Navigators = () => {
+    const Stack = createStackNavigator();
 
-// // export default Routes
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Main"
+                screenOptions={{ header: (props) => <Header {...props} /> }}
+            >
+                <Stack.Screen name="Main" component={Main} />
+                <Stack.Screen name="Settings" component={Settings} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+export default Navigators
 
+const Main = () => {
+    const Tab = createBottomTabNavigator();
 
-// const Navigation = () => {
-//     return (
-//         <Tab.Navigator>
-//             <Tab.Screen name="Home" component={Home} />
-//             <Tab.Screen name="Details" component={Details} />
-//         </Tab.Navigator>
-//     );
-// }
-
-// export const Routes = () => {
-//     return (
-//         <NavigationContainer>
-//             <Stack.Navigator>
-//                 <Stack.Screen
-//                     name="Home"
-//                     component={Navigation}
-//                     options={{ headerShown: false }}
-//                 />
-//                 <Stack.Screen name="Profile" component={Profile} />
-//                 <Stack.Screen name="Settings" component={Settings} />
-//             </Stack.Navigator>
-//         </NavigationContainer>
-//     );
-// }
-// export default Routes; 
+    return (
+        <Tab.Navigator initialRouteName="Home" >
+            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen name="Details" component={Details} />
+        </Tab.Navigator>
+    )
+}

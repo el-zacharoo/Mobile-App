@@ -18,8 +18,7 @@ export const Home = ({ navigation }) => {
                     Welcome to my app
                 </Text>
                 <View style={styles.row}>
-
-                    <Button style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Details')} variant="contained" >
+                    <Button style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Settings')} variant="contained" >
                         Create new
                     </Button>
 

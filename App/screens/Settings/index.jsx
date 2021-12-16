@@ -10,7 +10,7 @@ export const Settings = () => {
         </View>
     )
 }
-export default Details;
+export default Settings;
 
 const styles = StyleSheet.create({
     container: {
