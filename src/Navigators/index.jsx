@@ -3,6 +3,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import { Details } from '../screens/Details';
 import { Home } from '../screens/Home';
@@ -38,9 +39,21 @@ const Routes = () => {
                 tabBarInactiveTintColor: colors.disabled,
             }}
         >
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Details" component={Details} />
-            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen options={{
+                tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="home" color={color} size={size} />
+                ),
+            }} name="Home" component={Home} />
+            <Tab.Screen name="Details" options={{
+                tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="folder" color={color} size={size} />
+                ),
+            }} component={Details} />
+            <Tab.Screen name="Profile" options={{
+                tabBarIcon: ({ color, size }) => (
+                    <MaterialCommunityIcons name="account" color={color} size={size} />
+                ),
+            }} component={Profile} />
         </Tab.Navigator>
     )
 }

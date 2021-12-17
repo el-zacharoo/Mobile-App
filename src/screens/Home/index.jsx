@@ -25,7 +25,7 @@ export const Home = ({ navigation }) => {
                     </Button>
                 </Card.Actions>
             </Card>
-        </ViewTemplate >
+        </ViewTemplate>
     )
 }
 export default Home;
