@@ -39,21 +39,20 @@ const Routes = () => {
                 tabBarInactiveTintColor: colors.disabled,
             }}
         >
-            <Tab.Screen options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={size} />
-                ),
-            }} name="Home" component={Home} />
-            <Tab.Screen name="Details" options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="folder" color={color} size={size} />
-                ),
-            }} component={Details} />
-            <Tab.Screen name="Profile" options={{
-                tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="account" color={color} size={size} />
-                ),
-            }} component={Profile} />
+            {views.map((item, i) =>
+                <Tab.Screen key={i} options={{
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialCommunityIcons name={item.icon} color={color} size={size} />
+                    ),
+                }} name={item.title} component={item.component} />
+            )}
+
         </Tab.Navigator>
     )
 }
+
+const views = [
+    { title: "Home", icon: 'home', component: Home },
+    { title: "Details", icon: 'folder', component: Details },
+    { title: "Profile", icon: 'account', component: Profile }
+]
