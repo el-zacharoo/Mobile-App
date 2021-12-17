@@ -17,10 +17,10 @@ export const Home = ({ navigation }) => {
                     </Text>
                 </Card.Content>
                 <Card.Actions>
-                    <Button style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Settings')} variant="contained" >
+                    <Button icon="plus" style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Settings')} variant="contained" >
                         Create new
                     </Button>
-                    <Button variant="outlined" onPress={item === false ? () => setItem(true) : () => setItem(false)}  >
+                    <Button icon={item === false ? "pencil" : "close"} variant="outlined" onPress={item === false ? () => setItem(true) : () => setItem(false)}  >
                         {item === false ? 'Edit' : 'Cancel'}
                     </Button>
                 </Card.Actions>
