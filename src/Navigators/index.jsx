@@ -37,8 +37,7 @@ const Routes = () => {
                 header: (props) => <Header {...props} />,
                 tabBarActiveTintColor: colors.accent,
                 tabBarInactiveTintColor: colors.disabled,
-            }}
-        >
+            }} >
             {views.map((item, i) =>
                 <Tab.Screen key={i} options={{
                     tabBarIcon: ({ color, size }) => (
@@ -46,13 +45,12 @@ const Routes = () => {
                     ),
                 }} name={item.title} component={item.component} />
             )}
-
         </Tab.Navigator>
     )
 }
 
 const views = [
     { title: "Home", icon: 'home', component: Home },
-    { title: "Details", icon: 'folder', component: Details },
+    { title: "Feed", icon: 'format-list-text', component: Details },
     { title: "Profile", icon: 'account', component: Profile }
 ]
