@@ -9,7 +9,7 @@ export const Button = (props) => {
     switch (variant) {
         case 'contained':
             return (
-                <TouchableRipple  >
+                <TouchableRipple>
                     <Object uppercase={false} {...props} color={color ? color : colors.primary} mode="contained" >
                         {children}
                     </Object>

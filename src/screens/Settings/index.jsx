@@ -1,20 +1,15 @@
 import React from 'react';
 
-import { View, StyleSheet, Text } from 'react-native';
+import { Text } from 'react-native';
+import ViewTemplate from '../../components/ViewTemplate';
 
 
 export const Settings = () => {
     return (
-        <View style={styles.container}>
+        <ViewTemplate>
             <Text>Settings</Text>
-        </View>
+        </ViewTemplate>
     )
 }
 export default Settings;
 
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        marginVertical: 24,
-    },
-});

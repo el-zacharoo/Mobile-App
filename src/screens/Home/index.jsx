@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, ImageBackground } from 'react-native';
+import { ImageBackground } from 'react-native';
 import { Card, Text } from 'react-native-paper';
 import { Button } from '../../components/Button';
 import { theme } from '../../theme/index';
+import ViewTemplate from '../../components/ViewTemplate';
 
 export const Home = ({ navigation }) => {
     const [item, setItem] = useState(false);
 
 
     return (
-        <View style={styles.container}>
+        <ViewTemplate>
             <ImageBackground resizeMode="cover" style={{
                 flex: 1,
                 width: '100%',
                 justifyContent: "center"
             }} source={require('/Users/zachary/Native/mobile-app/src/assets/mountains.jpeg')} >
-                <Card style={{ backgroundColor: theme.colors.background, alignItems: 'center', margin: 5 }} mode="elevated" >
+                <Card style={{ backgroundColor: theme.colors.background, alignItems: 'center' }} mode="elevated" >
                     <Text style={theme.typography.h1}>Welcome to my app</Text>
                     <Card.Content>
                         <Text style={theme.typography.body1}>
@@ -32,18 +33,7 @@ export const Home = ({ navigation }) => {
                     </Card.Actions>
                 </Card>
             </ImageBackground>
-        </View >
+        </ViewTemplate >
     )
 }
 export default Home;
-
-const styles = StyleSheet.create({
-
-    container: {
-        flex: 1,
-        backgroundColor: theme.colors.backgroundColor,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-
-});
