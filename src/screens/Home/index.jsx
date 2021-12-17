@@ -7,6 +7,7 @@ import { theme } from '../../theme/index';
 export const Home = ({ navigation }) => {
     const [item, setItem] = useState(false);
 
+
     return (
         <View style={styles.container}>
             <ImageBackground resizeMode="cover" style={{
@@ -17,7 +18,7 @@ export const Home = ({ navigation }) => {
                 <Card style={{ backgroundColor: theme.colors.background, alignItems: 'center', margin: 5 }} mode="elevated" >
                     <Text style={theme.typography.h1}>Welcome to my app</Text>
                     <Card.Content>
-                        <Text>
+                        <Text style={theme.typography.body1}>
                             Hello world
                         </Text>
                     </Card.Content>
@@ -25,24 +26,19 @@ export const Home = ({ navigation }) => {
                         <Button style={{ marginRight: 4, elevation: 0 }} onPress={() => navigation.navigate('Settings')} variant="contained" >
                             Create new
                         </Button>
-                        {item === false ?
-                            <Button variant="outlined" onPress={() => setItem(true)}  >
-                                Edit
-                            </Button>
-                            :
-                            <Button variant="outlined" onPress={() => setItem(false)}  >
-                                Cancel
-                            </Button>
-                        }
+                        <Button variant="outlined" onPress={item === false ? () => setItem(true) : () => setItem(false)}  >
+                            {item === false ? 'Edit' : 'Cancel'}
+                        </Button>
                     </Card.Actions>
                 </Card>
             </ImageBackground>
-        </View>
+        </View >
     )
 }
 export default Home;
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         backgroundColor: theme.colors.backgroundColor,

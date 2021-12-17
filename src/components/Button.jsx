@@ -1,24 +1,23 @@
 import React from 'react';
 
-import { TouchableRipple, Button as Object } from 'react-native-paper';
-
-import { theme } from '../theme';
+import { useTheme, TouchableRipple, Button as Object } from 'react-native-paper';
 
 export const Button = (props) => {
     const { children, variant, color } = props;
+    const { colors } = useTheme()
 
     switch (variant) {
         case 'contained':
             return (
                 <TouchableRipple  >
-                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="contained" >
+                    <Object uppercase={false} {...props} color={color ? color : colors.primary} mode="contained" >
                         {children}
                     </Object>
                 </TouchableRipple>)
         case 'outlined':
             return (
                 <TouchableRipple>
-                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="outlined" >
+                    <Object uppercase={false} {...props} color={color ? color : colors.primary} mode="outlined" >
                         {children}
                     </Object>
                 </TouchableRipple>
@@ -26,7 +25,7 @@ export const Button = (props) => {
         case 'text':
             return (
                 <TouchableRipple>
-                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
+                    <Object uppercase={false} {...props} color={color ? color : colors.primary} mode="text" >
                         {children}
                     </Object>
                 </TouchableRipple>
@@ -34,7 +33,7 @@ export const Button = (props) => {
         default:
             return (
                 <TouchableRipple>
-                    <Object uppercase={false} {...props} color={color ? color : theme.colors.primary} mode="text" >
+                    <Object uppercase={false} {...props} color={color ? color : colors.primary} mode="text" >
                         {children}
                     </Object>
                 </TouchableRipple>

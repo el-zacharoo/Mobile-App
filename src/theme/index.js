@@ -11,7 +11,10 @@ const palette = {
     darkBlue: '#2c384c',
     lightBlue: '#399cdb',
     white: "#ffffff",
-    grey: '#C6C6C6'
+    grey: {
+        100: '#C6C6C6',
+        200: '#666666'
+    }
 }
 
 export const theme = {
@@ -21,7 +24,7 @@ export const theme = {
         primary: palette.darkBlue,
         accent: palette.lightBlue,
         background: palette.white,
-        disabled: palette.grey,
+        disabled: palette.grey[100]
     },
     typography: {
         h1: {
@@ -33,9 +36,10 @@ export const theme = {
         h2: {
             color: palette.white,
             fontSize: 32,
+        },
+        body1: {
+            fontSize: 12,
+            color: palette.grey[200]
         }
     },
-    animation: {
-
-    }
 };
