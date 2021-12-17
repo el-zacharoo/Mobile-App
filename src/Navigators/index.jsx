@@ -9,7 +9,7 @@ import { Home } from '../screens/Home';
 import { Profile } from '../screens/Profile';
 import { Settings } from '../screens/Settings';
 import { Header } from '../components/Header';
-import { theme } from '../theme';
+import { useTheme } from 'react-native-paper';
 
 export const Navigators = () => {
     const Stack = createStackNavigator();
@@ -27,14 +27,15 @@ export default Navigators
 
 const Routes = () => {
     const Tab = createBottomTabNavigator();
+    const { colors } = useTheme();
 
     return (
         <Tab.Navigator
             initialRouteName="Home"
             screenOptions={{
                 header: (props) => <Header {...props} />,
-                tabBarActiveTintColor: theme.colors.accent,
-                tabBarInactiveTintColor: theme.colors.disabled,
+                tabBarActiveTintColor: colors.accent,
+                tabBarInactiveTintColor: colors.disabled,
             }}
         >
             <Tab.Screen name="Home" component={Home} />

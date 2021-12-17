@@ -3,7 +3,6 @@ import React from 'react';
 import { Text } from 'react-native';
 import ViewTemplate from '../../components/ViewTemplate';
 
-
 export const Settings = () => {
     return (
         <ViewTemplate>
