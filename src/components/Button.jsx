@@ -2,7 +2,7 @@ import React from 'react';
 
 import { TouchableRipple, Button as Object } from 'react-native-paper';
 
-import { theme } from '../theme/index';
+import { theme } from '../theme';
 
 export const Button = (props) => {
     const { children, variant, color } = props;
