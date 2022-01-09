@@ -1,4 +1,14 @@
 # Mobile-App
 
+## Setup
+run 'npm install' in the command terminal
 
-Meant to be a basic React Native Application
+## Run
+Before using make sure you have xcode on your machine
+
+Split your command terminal into two tabs. 
+Then run 
+- react-native start
+- react-native run-ios
+
+
